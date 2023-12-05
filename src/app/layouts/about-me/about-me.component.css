@@ -1,0 +1,19 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--secondary-color);
+  padding: 5px 5vw;
+}
+
+img{
+  padding-top: 1rem;
+  padding-left: 3rem ;
+  max-width: 70%;
+  border-radius: 100px;
+}
+
+@media screen and (max-width:550px) {
+  .container {
+    display: block;
+  }
+}
