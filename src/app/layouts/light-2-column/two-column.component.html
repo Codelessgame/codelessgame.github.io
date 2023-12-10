@@ -1,0 +1,24 @@
+<div class="margin {{color}}-background">
+  <div class="container {{main_side}}-main">
+
+    <div *ngIf="main_side == 'left'">
+      <h1 class="primary-text">{{title}}</h1>
+      <p><ng-content></ng-content></p>
+    </div>
+
+    <div>
+      <img *ngIf="image_source != null"
+           src="{{image_source}}"
+      >
+      <p *ngIf="content_source != null">
+        {{content_source}}
+      </p>
+    </div>
+
+    <div *ngIf="main_side == 'right'">
+      <h1 class="primary-text">{{title}}</h1>
+      <p><ng-content></ng-content></p>
+    </div>
+
+  </div>
+</div>
