@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SkillsComponent } from './layouts/skills/skills.component';
-import { AboutMeComponent } from './layouts/about-me/about-me.component';
 import { MyWorkComponent } from './layouts/my-work/my-work.component';
+import { TwoColumnComponent } from './layouts/light-2-column/two-column.component';
+import { Dark2ColumnComponent } from './layouts/dark-2-column/dark-2-column.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -15,13 +16,14 @@ import { MyWorkComponent } from './layouts/my-work/my-work.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    SkillsComponent,
-    AboutMeComponent,
-    MyWorkComponent
+    MyWorkComponent,
+    TwoColumnComponent,
+    Dark2ColumnComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

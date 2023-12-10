@@ -1,9 +1,7 @@
 
-body {
-  font-family: "ROBOTO", sans-serif;
-}
 
 .nav{
+  font-family: "monospace", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,20 +13,21 @@ body {
   padding: 0 2em;
 }
 
-.nav h1,
+
  h1 {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 5vw;
-  margin: 0;
-  padding-bottom: 0.5rem;
   letter-spacing: 0.5rem;
   color: #03dac6;
   transition: all 0.3s ease;
+   padding: 0rem clamp(1rem, 2vw, 3rem);
 
 }
 h1:hover {
+  padding: 3vw;
   transform: translate3d(0, -10px, 22px);
   color: #ff0266;
+  background-color: rgba(255, 255, 255, 0.81);
+  border-radius: 5px;
 }
 
 a {
