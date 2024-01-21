@@ -6,9 +6,10 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MyWorkComponent } from './layouts/my-work/my-work.component';
-import { TwoColumnComponent } from './layouts/light-2-column/two-column.component';
-import { Dark2ColumnComponent } from './layouts/dark-2-column/dark-2-column.component';
+import { TwoColumnComponent } from './layouts/two-column/two-column.component';
 import {NgOptimizedImage} from "@angular/common";
+import { MyWorkCardsComponent } from './layouts/my-work-cards/my-work-cards.component';
+import { BlogComponent } from './pages/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {NgOptimizedImage} from "@angular/common";
     HomeComponent,
     MyWorkComponent,
     TwoColumnComponent,
-    Dark2ColumnComponent
+    MyWorkCardsComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

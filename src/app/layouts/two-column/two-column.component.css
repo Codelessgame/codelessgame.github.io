@@ -1,0 +1,33 @@
+.margin{
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  display: grid;
+  gap: 1.5rem;
+  margin-inline: auto;
+  overflow: auto;
+
+}
+
+.container.left-main {
+  grid-template-columns: 60fr 40fr;
+}
+
+.container.right-main {
+  grid-template-columns: 40fr 60fr;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1000px){
+  .container{
+    display: block;
+  }
+  .margin{
+    padding: 2vh 5vw;
+  }
+}

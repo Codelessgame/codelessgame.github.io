@@ -5,8 +5,11 @@
   --color-dark: rgba(90, 91, 100, 0.77);
   --text-on-dark: #ffffff;
 
-  --color-primary: rgba(3, 218, 198, 0.68);
+  --color-primary: rgba(3, 218, 198, 0.76);
   --text-on-primary: #ffffff;
+
+  --color-line: rgba(87, 108, 108, 0.02);
+
 }
 
 .light-background {
@@ -38,7 +41,11 @@
   color: var(--text-color);
 }
 
+a{
+  text-decoration: none;
+  color: var(--color-primary);
 
+}
 body {
   margin: 0;
   font-size: large;
@@ -47,41 +54,24 @@ body {
   line-height: 28px;
 }
 
-
-img {
-  width: 100%;
-  border-radius: 20px;
-}
-
 .margin{
-  padding: 5vh 15vw;
+  padding: 5vh 10vw;
 }
 
-
-.container {
-    display: grid;
-    gap: 1.5rem;
-    margin-inline: auto;
+.warning{
+  display: flex;
+  color: red;
 }
-
-.container.left-main {
-  grid-template-columns: 65fr 35fr;
-}
-
-.container.right-main {
-  grid-template-columns: 35fr 65fr;
-}
-
-
-
-@media screen and (max-width: 1100px){
-  .container{
-    display: block;
-  }
+@media screen and (max-width: 1000px){
   .margin{
-    padding: 2vh 4vw;
+    padding: 2vh 5vw;
   }
 }
+
+
+
+
+
 
 
 

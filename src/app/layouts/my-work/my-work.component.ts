@@ -10,5 +10,8 @@ export class MyWorkComponent {
   @Input() link_1="";
   @Input() link_2: string="";
   @Input() link_3: string="";
+  @Input() img_1: string="";
+  @Input() img_2: string="";
+  @Input() img_3: string="";
 
 }

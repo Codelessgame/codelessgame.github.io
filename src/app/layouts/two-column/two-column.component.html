@@ -1,0 +1,11 @@
+<div class="margin {{color}}-background">
+
+  <div class="container {{main_side}}-main">
+    <div [ngStyle]="{'order': main_side == 'left' ? '-1' : '1'}"> <!-- ternary operator: (condition) ? (if true value) : (if false value) -->
+      <ng-content select="[main]"></ng-content>
+    </div>
+    <div>
+      <ng-content select="[supplement]"></ng-content>
+    </div>
+  </div>
+</div>

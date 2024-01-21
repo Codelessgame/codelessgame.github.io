@@ -1,127 +1,52 @@
-.wrap{
+.container{
 
-
-
-  padding: 2vh 9vw 3vh;
-  background-color: var(--color-light);
-}
-
-img{
-  max-height: 10vh;
-}
-/* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
-/* Design */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.follow-me{
-  display: flex;
-  margin-left: 50%;
-}
-
-.main{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 
 }
-
-img {
-  max-height: 500px;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+.item-1{
+  background-color: #0b959a;
 }
-
-.btn {
-  color: var(--color-dark);
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 20px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+.item-2{
+  background-color: #be4cc2;
 }
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.item-3{
+  background-color: #e7c331;
 }
-a{
-  text-decoration: none;
-
+.item-4{
+  background-color: #8e61b0;
 }
-.cards {
-
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.item-5{
+  background-color: #a7da6f;
 }
-
-.cards_item {
-
-  display: flex;
-  padding: 0.5rem;
-  transition: 0.4s;
+.item-6{
+  background-color: #e19090;
+}
+.item-7{
+  background-color: #578bd9;
+}
+.item-8{
+  background-color: #03dac6;
+}
+.item-9{
+  background-color: #deba8a;
+}
+.item-10{
+  background-color: #d2e4e7;
 }
 .cards_item:hover {
   transition: 0.5s;
-  scale: 105%;
+  scale: 101%;
+}
+.middle{
+  text-align: center;
 }
 
-
-@media (min-width: 40rem) {
-  .cards_item {
-    width: 50%;
+@media screen and (max-width: 1000px){
+  .container{
+    grid-template-columns: repeat(2,1fr);
   }
+
 }
 
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 33.3333%;
-  }
-}
-
-.card {
-
-  border-radius: 20px;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card_content {
-
-  padding: 1rem;
-  background: linear-gradient(to bottom left, #efb38d 40%, #c59e8a 100%);
-}
-
-.card_title {
-
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-}
-
-.card_text {
-  color: var(--color-dark);
-  font-size: 0.875rem;
-  line-height: 1.5;
-  font-weight: 400;
-}
 

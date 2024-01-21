@@ -15,4 +15,6 @@ export class TwoColumnComponent {
   @Input() main_side: "left" | "right" = "right"
   @Input() color: "dark" | "light" = "light"
 
+  @Input() extra_image_class = ""
+
 }
