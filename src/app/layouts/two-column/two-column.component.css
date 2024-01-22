@@ -2,7 +2,7 @@
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.6);
 }
 
-.cards-container {
+.image-container {
   display: grid;
   gap: 1.5rem;
   margin-inline: auto;
@@ -10,11 +10,11 @@
 
 }
 
-.cards-container.left-main {
+.image-container.left-main {
   grid-template-columns: 60fr 40fr;
 }
 
-.cards-container.right-main {
+.image-container.right-main {
   grid-template-columns: 40fr 60fr;
 }
 
@@ -24,7 +24,7 @@ img {
 }
 
 @media screen and (max-width: 1000px){
-  .cards-container{
+  .image-container{
     display: block;
   }
   .margin{
