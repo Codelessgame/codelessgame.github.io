@@ -8,10 +8,6 @@ import {Component, Input} from '@angular/core';
 export class MyWorkComponent {
   click: string= "SEE MORE";
   @Input() link_1="";
-  @Input() link_2: string="";
-  @Input() link_3: string="";
-  @Input() img_1: string="";
-  @Input() img_2: string="";
-  @Input() img_3: string="";
+
 
 }

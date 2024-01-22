@@ -41,11 +41,12 @@
   color: var(--text-color);
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--color-primary);
 
 }
+
 body {
   margin: 0;
   font-size: large;
@@ -54,37 +55,20 @@ body {
   line-height: 28px;
 }
 
-.margin{
+.margin {
   padding: 5vh 10vw;
 }
 
-.warning{
+.warning {
   display: flex;
   color: red;
 }
-@media screen and (max-width: 1000px){
-  .margin{
+
+@media screen and (max-width: 1000px) {
+  .margin {
     padding: 2vh 5vw;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Document

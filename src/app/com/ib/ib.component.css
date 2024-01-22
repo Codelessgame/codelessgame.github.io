@@ -1,0 +1,33 @@
+.cards-container {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (max-width: 1000px) {
+  .cards-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.cards-item {
+  text-align: center;
+  transition: 0.5s;
+  scale: 100%;
+  cursor: pointer;
+}
+
+.cards-item:hover:not(.enlarged) {
+  scale: 104%;
+  z-index: 1;
+}
+
+.cards-item.enlarged {
+  grid-column: span 2;
+}
+
+
+
+.cards-item:not(.enlarged) > .cards-description {
+  display: none;
+}

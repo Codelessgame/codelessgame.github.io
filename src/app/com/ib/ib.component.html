@@ -1,0 +1,27 @@
+
+<div
+  class="cards-container"
+>
+
+  <div
+    *ngFor="let item of Items; let i = index"
+
+    class="cards-item"
+    [class.enlarged]="isEnlarged(i)"
+    [ngStyle]="{ backgroundColor: item.color }"
+
+    (click)="toggleEnlarged(i)"
+  >
+
+    <h2 class="cards-title">
+      {{item.title}}
+    </h2>
+    <p class="cards-subtitle">
+      {{item.subtitle}}
+    </p>
+    <p class="cards-description">
+      {{item.description}}
+    </p>
+
+  </div>
+</div>

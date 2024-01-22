@@ -7,7 +7,7 @@ img.smaller {
   width: 20vw;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   img.smaller {
     display: block;
     width: 50%;
