@@ -4,6 +4,7 @@
 }
 
 .screen{
+  margin: 0 auto;
   width: 25vw;
   aspect-ratio: 9/16;
   border: 3px solid;
@@ -69,7 +70,7 @@
   }
 
   60.0001% { /* -- View 4 -- */
-    background-position: 0% 0%;
+    background-position: 0 0;
     background-size: 300%;
   }
 
@@ -97,7 +98,7 @@
   left: 0;
   top: 0;
   background-size: 200%;
-  background-position: 0% 0%;
+  background-position: 0 0;
   filter: sepia(100%) hue-rotate(160deg);
   opacity: 0.6;
   animation: pan-image 15s linear infinite;

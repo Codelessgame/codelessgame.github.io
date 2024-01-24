@@ -13,13 +13,19 @@ export class IBComponent {
     color: string
   }[] = []
   protected readonly onclick = onclick;
+  enlargedIndices: number[] = [];
 
-  enlargedIndex: number | null = null;
   toggleEnlarged(index: number): void {
-    this.enlargedIndex = this.enlargedIndex === index ? null : index;
+    if (this.isEnlarged(index)) {
+      // Remove index if already enlarged
+      this.enlargedIndices = this.enlargedIndices.filter((i) => i !== index);
+    } else {
+      // Add index if not enlarged
+      this.enlargedIndices.push(index);
+    }
   }
 
   isEnlarged(index: number): boolean {
-    return this.enlargedIndex === index;
+    return this.enlargedIndices.includes(index);
   }
 }
