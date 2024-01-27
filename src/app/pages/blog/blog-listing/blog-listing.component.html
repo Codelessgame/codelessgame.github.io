@@ -1,0 +1,15 @@
+<div class="band">
+  <div
+    *ngFor= "let postData of blogPostsData"
+    class="blog-item">
+    <a class="card" routerLink="/blog/{{postData.id}}">
+
+      <div class="thumb">
+        <img class="image" src="{{postData.image}}" alt="{{postData.title}}">
+      </div>
+
+      <h1>{{postData.title}}</h1>
+    </a>
+
+  </div>
+</div>

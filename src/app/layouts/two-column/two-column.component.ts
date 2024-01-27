@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 
 
 @Component({
-  selector: 'two-columns',
+  selector: 'two-column',
   templateUrl: './two-column.component.html',
   styleUrls: ['./two-column.component.css']
 })

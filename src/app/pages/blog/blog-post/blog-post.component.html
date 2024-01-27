@@ -1,0 +1,5 @@
+<article class="margin">
+  <h2><a routerLink="/blog">My Blog</a> > {{blogPostData?.title}}</h2>
+  <img [src]="blogPostData?.image" alt="Image for blog named {{blogPostData?.title}}" />
+  <p>{{blogPostData?.content}}</p>
+</article>
