@@ -13,7 +13,8 @@ import {MyWorkCardsComponent} from './layouts/my-work-cards/my-work-cards.compon
 import {BlogComponent} from './pages/blog/blog.component';
 import { BlogCardComponent } from './com/blog-card/blog-card.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
-import {provideRouter} from "@angular/router";
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import {provideRouter} from "@angular/router";
     AppRoutingModule,
     NgOptimizedImage
   ],
-  providers: [provideRouter(routes)],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
