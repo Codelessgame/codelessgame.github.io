@@ -4,7 +4,7 @@ export interface BlogPostData {
 
   title: string
   content: string
-
+  side:  "left" | "right"
   image: string
 
 }

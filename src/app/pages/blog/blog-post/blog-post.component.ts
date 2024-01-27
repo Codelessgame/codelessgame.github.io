@@ -15,9 +15,14 @@ export class BlogPostComponent {
 
   blogPostData?: BlogPostData = undefined;
 
+  getLeftRight(): any {
+    return this.blogPostData?.side ?? "right"
+  }
+
   constructor() {
     const blogPostId = this.activatedRoute.snapshot.params["id"];
     this.blogPostData = this.blogService.getPost(blogPostId);
   }
+
 
 }

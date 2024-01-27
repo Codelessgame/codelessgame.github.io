@@ -1,5 +1,14 @@
-<article class="margin">
-  <h2><a routerLink="/blog">My Blog</a> > {{blogPostData?.title}}</h2>
-  <img [src]="blogPostData?.image" alt="Image for blog named {{blogPostData?.title}}" />
-  <p>{{blogPostData?.content}}</p>
-</article>
+<div>
+  <h1 class="title "><a routerLink="/blog">My Blog</a> > {{blogPostData?.title}}</h1>
+<two-column [main_side]="blogPostData?.side ?? 'right'">
+
+  <ng-container main>
+    <p class="main-image">{{blogPostData?.content}}</p>
+  </ng-container>
+  <ng-container supplement>
+    <div class="main-image">
+      <img [src]="blogPostData?.image" alt="Image for blog named {{blogPostData?.title}}" />
+    </div>
+  </ng-container>
+</two-column>
+</div>

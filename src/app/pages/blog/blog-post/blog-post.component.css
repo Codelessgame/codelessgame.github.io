@@ -1,4 +1,24 @@
-image {
+
+.title{
+  margin: 5vh 10vw;
+    width: 50%;
+
+}
+.center{
+  padding: 0 10vw;
+  align-content: center;
+}
+
+
+.main-image > img {
   width: 100%;
-  height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .center {
+    padding: 0 5vw;
+  }
+  .main-image{
+    width: 100%;
+  }
 }

@@ -10,6 +10,7 @@
 
   --color-line: rgba(87, 108, 108, 0.02);
 
+
 }
 
 .light-background {
@@ -37,6 +38,7 @@
 }
 
 .primary-text {
+
   --text-color: var(--color-primary);
   color: var(--text-color);
 }
@@ -49,7 +51,7 @@ a {
 
 body {
   margin: 0;
-  font-size: large;
+  font-size: x-large;
   font-family: "Josefin Sans", sans-serif;
   place-items: center;
   line-height: 28px;
