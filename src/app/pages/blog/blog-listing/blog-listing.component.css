@@ -20,7 +20,9 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
+.title{
+  line-height: 50px;
+}
 .card {
   border-radius: 5px;
   background: #fdfafa;
