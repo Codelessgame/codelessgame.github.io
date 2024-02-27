@@ -25,4 +25,6 @@ export class BlogPostComponent {
   }
 
 
+  protected readonly undefined = undefined;
+
 }

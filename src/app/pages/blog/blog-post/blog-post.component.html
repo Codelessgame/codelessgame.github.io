@@ -1,16 +1,18 @@
 <div>
-  <h1 class="title "><a class="btn" routerLink="/blog">My Blog</a> > {{blogPostData?.title}}</h1>
-<two-column [main_side]="blogPostData?.side ?? 'right'">
-  <ng-container main>
-    <p class="main-image">{{blogPostData?.content}}</p>
-    <p *ngIf="blogPostData?.link">
-      <a [href]="blogPostData?.link">{{blogPostData?.link}}</a>
-    </p>
-  </ng-container>
-  <ng-container supplement>
-    <div class="main-image">
-      <img [src]="blogPostData?.image" alt="Image for blog named {{blogPostData?.title}}" />
-    </div>
-  </ng-container>
-</two-column>
+  <div class="{{blogPostData?.color}}-background">
+    <h1 class="title "><a class="btn" routerLink="/blog">My Blog</a> > {{blogPostData?.title}}</h1>
+  </div>
+  <two-column class="{{blogPostData?.color}}-background-reverse" [main_side]="blogPostData?.side ?? 'right'">
+    <ng-container main>
+      <p class="main-image">{{blogPostData?.content}}</p>
+      <p *ngIf="blogPostData?.link">
+        <a [href]="blogPostData?.link" target="_blank" rel="noopener noreferrer">{{blogPostData?.link}}</a>
+      </p>
+    </ng-container>
+    <ng-container supplement>
+      <div class="main-image">
+        <img [src]="blogPostData?.image" alt="Image for blog named {{blogPostData?.title}}" />
+      </div>
+    </ng-container>
+  </two-column>
 </div>

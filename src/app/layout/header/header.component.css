@@ -54,7 +54,7 @@ a {
   color: #03dac6;
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 
@@ -72,3 +72,8 @@ a {
   right: 0;
 }
 
+@media screen and (max-width: 1000px){
+  .nav-tab{
+    font-size: 5vw;
+  }
+}
