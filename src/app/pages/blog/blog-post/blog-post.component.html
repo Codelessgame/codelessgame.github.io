@@ -5,7 +5,7 @@
   <ng-container main>
     <p class="main-image">{{blogPostData?.content}}</p>
   
-    <a ng-if="{{blogPostData?.link}}" class="button" src="{{blogPostData?.link}}">link</a> 
+    <a *ngIf="{{blogPostData?.link}}" class="button" src="{{blogPostData?.link}}">link</a> 
    
   </ng-container>
   <ng-container supplement>
