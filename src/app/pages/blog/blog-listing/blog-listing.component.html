@@ -8,7 +8,12 @@
         <img class="image" src="{{postData.image}}" alt="{{postData.title}}">
       </div>
 
-      <h1 class="titl">{{postData.title}}</h1>
+      <h1 class="title">{{postData.title}}</h1>
+      <ul class="tags">
+        <li *ngFor="let tag of postData.tags"><a href="#" class="tag">{{tag}}</a></li>
+<!--        <li><a href="#" class="tag">CSS</a></li>-->
+<!--        <li><a href="#" class="tag">JavaScript</a></li>-->
+      </ul>
       <p class="left-hang">{{postData.date}}</p>
 
     </a>

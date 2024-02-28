@@ -1,9 +1,11 @@
 export interface BlogPostData {
 
   id: number
-  date?:string
 
+
+  date?:string
   link?: string
+  tags: string[]
 
   title: string
   content: string
