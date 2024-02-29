@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Tag} from "./tag";
 import {BlogPostData} from "./blogpostdata";
+import {BlogPostComponent} from "./blog-post/blog-post.component";
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,13 @@ export class BlogService {
     {id: 7, date:"2024-03-18", side: "right", color: "dark",  tags:[Tag.PHYSICS, Tag.SCHOOL], title: 'Physics brawl', image:'assets/soutez_001.jpg', content: 'I participated in physics competition Physics brawl in a team of 5 people Adam Baborák, Benjamin Hejda, Jindřich Boula and Huu Duy Nguyen. ' + 'More info about the competition:', link:"https://fyziklani.org/"},
   ];
 
+  // Method to reorganize posts by tag
+  reorganizePostsByTag(tag: Tag): BlogPostData[] {
+    const taggedPosts = this.posts.filter(post => post.tags.includes(tag));
+    const untaggedPosts = this.posts.filter(post => !post.tags.includes(tag));
+    return [...taggedPosts, ...untaggedPosts];
+  }
+
   getAllPosts(): BlogPostData[] {
     return this.posts;
   }
@@ -26,3 +34,6 @@ export class BlogService {
   }
 
 }
+
+
+

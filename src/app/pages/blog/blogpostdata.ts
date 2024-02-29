@@ -1,3 +1,5 @@
+import {Tag} from "./tag";
+
 export interface BlogPostData {
 
   id: number
@@ -5,7 +7,7 @@ export interface BlogPostData {
 
   date?:string
   link?: string
-  tags: string[]
+  tags: Tag[]
 
   title: string
   content: string
