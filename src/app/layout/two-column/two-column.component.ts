@@ -13,7 +13,7 @@ export class TwoColumnComponent {
   @Input() content_source: string | null = null;
 
   @Input() main_side: "left" | "right" = "right"
-  @Input() color: "dark" | "light" = "light"
+  @Input() color: string =""
 
   @Input() extra_image_class = ""
 

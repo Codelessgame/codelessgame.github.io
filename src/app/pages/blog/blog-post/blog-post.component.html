@@ -1,8 +1,8 @@
 <div>
-  <div class="{{blogPostData?.color}}-background">
+  <div class="{{blogPostData?.color}}-background-reverse margin">
     <h1 class="title "><a class="btn" routerLink="/blog">My Blog</a> > {{blogPostData?.title}}</h1>
   </div>
-  <two-column class="{{blogPostData?.color}}-background-reverse" [main_side]="blogPostData?.side ?? 'right'">
+  <two-column color="{{blogPostData?.color}}" [main_side]="blogPostData?.side ?? 'right'">
     <ng-container main>
       <p class="main-image">{{blogPostData?.content}}</p>
       <p *ngIf="blogPostData?.link">

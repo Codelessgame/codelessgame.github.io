@@ -11,7 +11,7 @@ import {Tag} from "../tag";
 export class BlogListingComponent {
 
   // blogService = inject(BlogService);
-
+  fillterSign: any
   blogPostsData: BlogPostData[] = [];
 
   // constructor() {
@@ -25,7 +25,9 @@ export class BlogListingComponent {
 
   // Method to reorganize posts by tag
   reorganisedByTag(event: MouseEvent, tag: Tag): void {
-    this.blogPostsData = this.blogService.reorganizePostsByTag(tag);
+    this.fillterSign = tag
+    this.blogPostsData = this.blogService.reorganizePostsByTag(tag)
+
     console.log("data", this.blogPostsData);
     event.preventDefault();
     event.stopPropagation();

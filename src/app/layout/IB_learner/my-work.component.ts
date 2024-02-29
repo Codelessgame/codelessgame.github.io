@@ -8,6 +8,6 @@ import {Component, Input} from '@angular/core';
 export class MyWorkComponent {
   click: string= "SEE MORE";
   @Input() link_1="";
-
+  @Input() color?: "dark" | "light"
 
 }
