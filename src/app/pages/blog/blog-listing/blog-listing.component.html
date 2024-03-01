@@ -1,24 +1,31 @@
 <div class="light-background">
-  <div class="box-filter" *ngIf="fillterSign">
-  <h1>Filtered by </h1>
-  <h1 class="filter" > {{fillterSign}}</h1>
+
+ <!-- Do further research on ngIf defined variables -->
+  <ng-container *ngIf="selection$ | async; let selection">
+    <div *ngIf="selection.length > 0" class="box-filter" >
+      <h1>Tags: </h1>
+      <h1 *ngFor="let tag of selection" class="filter" (click)="toggleTagged($event, tag)">{{tag}}</h1>
+    </div>
+  </ng-container>
+
+  <div class="band">
+    <div *ngFor="let postData of posts$ | async" class="blog-item">
+      <a class="card" routerLink="/blog/{{postData.id}}">
+        <div class="thumb">
+          <img class="image" src="{{postData.image}}" alt="{{postData.title}}">
+        </div>
+
+        <h1 class="title">{{ postData.title }}</h1>
+
+        <ul class="tags">
+          <li *ngFor="let tag of postData.tags">
+            <div (click)="toggleTagged($event, tag)" class="tag">{{ tag }}</div>
+          </li>
+        </ul>
+
+        <p class="left-hang">{{ postData.date }}</p>
+      </a>
+    </div>
   </div>
 
-    <div class="band">
-      <div *ngFor="let postData of blogPostsData" class="blog-item">
-        <a class="card" routerLink="/blog/{{postData.id}}">
-          <div class="thumb">
-            <img class="image" src="{{postData.image}}" alt="{{postData.title}}">
-          </div>
-
-          <h1 class="title">{{ postData.title }}</h1>
-
-          <ul class="tags">
-            <li *ngFor="let tag of postData.tags"><div (click)="reorganisedByTag($event, tag)" class="tag">{{ tag }}</div></li>
-          </ul>
-
-          <p class="left-hang">{{ postData.date }}</p>
-        </a>
-      </div>
-    </div>
 </div>

@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 import {BlogService} from "../blog.service";
-import {BlogPostData} from "../blogpostdata";
-import {Tag} from "../tag";
+import {BlogPostData} from "../blog-post-data";
+import {BlogTag} from "../blog-tag";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-blog-listing',
@@ -10,27 +11,19 @@ import {Tag} from "../tag";
 })
 export class BlogListingComponent {
 
-  // blogService = inject(BlogService);
-  fillterSign: any
-  blogPostsData: BlogPostData[] = [];
+  posts$: Observable<readonly BlogPostData[]> = this.blogService.selectedPosts$;
+  selection$: Observable<readonly BlogTag[]> = this.blogService.selection$;
 
-  // constructor() {
-  //   this.blogPostsData = this.blogService.getAllPosts()
-  // }
+  constructor(
+    private blogService: BlogService
+  ) { }
 
-  constructor(private blogService: BlogService) {
-    this.blogPostsData = this.blogService.posts;
-  }
-
-
-  // Method to reorganize posts by tag
-  reorganisedByTag(event: MouseEvent, tag: Tag): void {
-    this.fillterSign = tag
-    this.blogPostsData = this.blogService.reorganizePostsByTag(tag)
-
-    console.log("data", this.blogPostsData);
+  toggleTagged(event: MouseEvent, tag: BlogTag): void {
     event.preventDefault();
     event.stopPropagation();
+
+    this.blogService.toggleSelectionTag(tag);
   }
+
 }
 

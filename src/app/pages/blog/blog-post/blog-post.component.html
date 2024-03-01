@@ -1,17 +1,17 @@
-<div>
-  <div class="{{blogPostData?.color}}-background-reverse margin">
-    <h1 class="title "><a class="btn" routerLink="/blog">My Blog</a> > {{blogPostData?.title}}</h1>
+<div *ngIf="post$ | async; let post">
+  <div class="{{post?.color}}-background-reverse margin">
+    <h1 class="title "><a class="btn" routerLink="/blog">My Blog</a> > {{post?.title}}</h1>
   </div>
-  <two-column color="{{blogPostData?.color}}" [main_side]="blogPostData?.side ?? 'right'">
+  <two-column color="{{post?.color}}" [main_side]="post?.side ?? 'right'">
     <ng-container main>
-      <p class="main-image">{{blogPostData?.content}}</p>
-      <p *ngIf="blogPostData?.link">
-        <a [href]="blogPostData?.link" target="_blank" rel="noopener noreferrer">{{blogPostData?.link}}</a>
+      <p class="main-image">{{post?.content}}</p>
+      <p *ngIf="post?.link">
+        <a [href]="post?.link" target="_blank" rel="noopener noreferrer">{{post?.link}}</a>
       </p>
     </ng-container>
     <ng-container supplement>
       <div class="main-image">
-        <img [src]="blogPostData?.image" alt="Image for blog named {{blogPostData?.title}}" />
+        <img [src]="post?.image" alt="Image for blog named {{post?.title}}" />
       </div>
     </ng-container>
   </two-column>

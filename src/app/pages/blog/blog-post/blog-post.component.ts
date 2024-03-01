@@ -1,7 +1,8 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {BlogService} from "../blog.service";
-import {BlogPostData} from "../blogpostdata";
+import {BlogPostData} from "../blog-post-data";
+import {distinctUntilChanged, map, Observable} from "rxjs";
 
 @Component({
   selector: 'app-blogpost',
@@ -10,21 +11,17 @@ import {BlogPostData} from "../blogpostdata";
 })
 export class BlogPostComponent {
 
-  activatedRoute = inject(ActivatedRoute);
-  blogService = inject(BlogService);
+  id$: Observable<number> = this.activatedRoute.params
+    .pipe(
+      map(params => parseInt(params["id"])),
+      distinctUntilChanged()
+    );
 
-  blogPostData?: BlogPostData = undefined;
+  post$: Observable<BlogPostData | undefined> = this.blogService.getPost(this.id$)
 
-  getLeftRight(): any {
-    return this.blogPostData?.side ?? "right"
-  }
-
-  constructor() {
-    const blogPostId = this.activatedRoute.snapshot.params["id"];
-    this.blogPostData = this.blogService.getPost(blogPostId);
-  }
-
-
-  protected readonly undefined = undefined;
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private blogService: BlogService,
+  ) { }
 
 }
