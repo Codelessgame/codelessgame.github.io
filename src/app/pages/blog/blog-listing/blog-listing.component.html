@@ -1,7 +1,7 @@
 <div class="light-background">
 
  <!-- Do further research on ngIf defined variables -->
-  <ng-container *ngIf="selection$ | async; let selection">
+  <ng-container class="box" *ngIf="selection$ | async; let selection">
     <div *ngIf="selection.length > 0" class="box-filter" >
       <h1>Tags: </h1>
       <h1 *ngFor="let tag of selection" class="filter" (click)="toggleTagged($event, tag)">{{tag}}</h1>

@@ -3,18 +3,20 @@
   height: 100%;
 }
 
+
 .box-filter{
   display: flex;
+  flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
   padding: 4vh 0;
-  grid-gap: 20px;
+  grid-gap: 0 20px;
 }
 .filter {
   background: #eee;
   border-radius: 6px 0 0 6px;
   color: #999;
-  display: inline-block;
+
   height: 52px;
   line-height: 52px;
   padding: 0 20px 0 23px;
