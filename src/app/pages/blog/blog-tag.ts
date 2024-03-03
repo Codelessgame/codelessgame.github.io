@@ -3,4 +3,6 @@ export const enum BlogTag {
   ART = 'art',
   SCHOOL = 'school',
   PROGRAMMING = 'programming',
+  PART_TIME= "part-time-job",
+  FREE_TIME ="free-time",
 }
